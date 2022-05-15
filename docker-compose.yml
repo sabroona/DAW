@@ -1,0 +1,59 @@
+services:
+  mongodb_server_food:
+    hostname: mongodb_server_food
+    image: mongo
+    expose:
+      - 27017
+    ports:
+      - 30001:27017 
+    restart: always
+    command: mongod --replSet replicaSet
+  mongodb_server_animal:
+    hostname: mongodb_server_animal
+    image: mongo
+    expose:
+      - 27017
+    ports:
+      - 30002:27017
+    restart: always
+    command: mongod --replSet replicaSet
+  mongodb_server_city:
+    hostname: mongodb_server_city
+    image: mongo
+    expose:
+      - 27017
+    ports:
+      - 30003:27017
+    restart: always
+    command: mongod --replSet replicaSet
+
+  mongoinit:
+    image: mongo
+    restart: "no"
+    depends_on:
+      - mongodb_server_food
+      - mongodb_server_animal
+      - mongodb_server_city
+    command: >
+      mongo --host mongodb_server_food:27017 --eval 
+      '
+      db = (new Mongo("localhost:27017")).getDB("database");
+      config = {
+      "_id" : "replicaSet",
+      "members" : [
+        {
+          "_id" : 0,
+          "host" : "mongodb_server_food:27017"
+        },
+        {
+          "_id" : 1,
+          "host" : "mongodb_server_animal:27017"
+        },
+        {
+          "_id" : 2,
+          "host" : "mongodb_server_city:27017"
+        }
+      ]
+      };
+      rs.initiate(config);
+      '
