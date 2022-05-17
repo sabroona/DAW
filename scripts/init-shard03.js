@@ -1,6 +1,6 @@
 rs.initiate(
     { 
-        _id: "rs-shard-03", 
+        _id: "shard-03-rs", 
         version: 1, 
         members: [
             { 
