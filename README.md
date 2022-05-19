@@ -45,7 +45,7 @@ use database
 sh.enableSharding("database")
 
 // Setup shardingKey for collection `collection`**
-db.adminCommand( { shardCollection: "database.collection", key: { supplierId: "hashed" } } )
+db.adminCommand( { shardCollection: "database.collection", key: { type: "hashed" } } )
 
 ```
 
