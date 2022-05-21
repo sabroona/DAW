@@ -12,7 +12,10 @@ rs.initiate(
             }, { 
                 _id: 2, 
                 host: "shard02-c:27017" 
-            },
+            }, { 
+                _id: 3, 
+                host: "shard02-d:27017" 
+            }
         ] 
     }
 )
