@@ -1,25 +1,25 @@
 db.collection.insertMany([
-        { title: 'Spaghetti',  type: 'Nahrung'},
-        { title: 'Tomate',  type: 'Nahrung'},
-        { title: 'Joghurt',  type: 'Nahrung'},
-        { title: 'Gurke',  type: 'Nahrung'},
-        { title: 'Sellerie',  type: 'Nahrung'},
-        { title: 'Schokolade',  type: 'Nahrung'},
-        { title: 'Hummus',  type: 'Nahrung'},
-        { title: 'Birne',  type: 'Nahrung'},
-        { title: 'Melone',  type: 'Nahrung'},
-        { title: 'Kaffee',  type: 'Nahrung'},
+        { title: 'Spaghetti',  type: 'Essen'},
+        { title: 'Tomate',  type: 'Essen'},
+        { title: 'Joghurt',  type: 'Essen'},
+        { title: 'Gurke',  type: 'Essen'},
+        { title: 'Sellerie',  type: 'Essen'},
+        { title: 'Schokolade',  type: 'Essen'},
+        { title: 'Hummus',  type: 'Essen'},
+        { title: 'Birne',  type: 'Essen'},
+        { title: 'Melone',  type: 'Essen'},
+        { title: 'Kaffee',  type: 'Essen'},
 
-        { title: 'Tischtennis',  type: 'Sport'},
-        { title: 'Schwimmen',  type: 'Sport'},
-        { title: 'Fussball',  type: 'Sport'},
-        { title: 'Basketball',  type: 'Sport'},
-        { title: 'Ballett',  type: 'Sport'},
-        { title: 'Handball',  type: 'Sport'},
-        { title: 'Rugby',  type: 'Sport'},
-        { title: 'Golf',  type: 'Sport'},
-        { title: 'Hürdenlauf',  type: 'Sport'},
-        { title: 'Stabhochsprung',  type: 'Sport'},
+        { title: 'Tischtennis',  type: 'Hobby'},
+        { title: 'Schwimmen',  type: 'Hobby'},
+        { title: 'Fussball',  type: 'Hobby'},
+        { title: 'Basketball',  type: 'Hobby'},
+        { title: 'Ballett',  type: 'Hobby'},
+        { title: 'Handball',  type: 'Hobby'},
+        { title: 'Rugby',  type: 'Hobby'},
+        { title: 'Golf',  type: 'Hobby'},
+        { title: 'Hürdenlauf',  type: 'Hobby'},
+        { title: 'Stabhochsprung',  type: 'Hobby'},
 
         { title: 'Jonas',  type: 'Person'},
         { title: 'Yannik',  type: 'Person'},
@@ -34,6 +34,6 @@ db.collection.insertMany([
     ])
 
 
-    db.collection.insertOne({ title: 'Apfel',  type: 'Nahrung'})
-    db.collection.insertOne({ title: 'Tennis',  type: 'Sport'})
+    db.collection.insertOne({ title: 'Apfel',  type: 'Essen'})
+    db.collection.insertOne({ title: 'Tennis',  type: 'Hobby'})
     db.collection.insertOne({ title: 'Max',  type: 'Person'})
